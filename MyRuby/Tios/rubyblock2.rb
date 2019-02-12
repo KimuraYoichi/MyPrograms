@@ -1,17 +1,17 @@
-class Array  
-	def iterate!  
-		self.each_with_index do |n, i|  
-			self[i] = yield(n)  
-		end  
-	end  
-end  
+# frozen_string_literal: true
 
-array = [1, 2, 3, 4]  
+class Array
+  def iterate!
+    each_with_index do |n, i|
+      self[i] = yield(n)
+    end
+  end
+end
 
-array.iterate! do |n|  
+array = [1, 2, 3, 4]
 
-n ** 2  
-
-end  
+array.iterate! do |n|
+  n**2
+end
 
 puts array.inspect
