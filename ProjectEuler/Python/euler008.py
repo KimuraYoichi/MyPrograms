@@ -62,7 +62,7 @@ s20='71636269561882670428252483600823257530420752963450'
 allstr=s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11+s12+s13+s14+s15+s16+s17+s18+s19+s20
 
 for i in range(1001-n):
-    if ('0' in allstr[i:n+i]):
+    if '0' in allstr[i:n + i]:
         continue
     else:
         for c in list(allstr[i:i+n]):

@@ -4,14 +4,17 @@
 Created on Thu Feb  7 19:06:54 2019
 
 @author: zx7y-kmr
-"""
-"""
+
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
 2520 は 1 から 10 の数字の全ての整数で割り切れる数字であり, そのような数字の中では最小の値である.
 
 では, 1 から 20 までの整数全てで割り切れる数字の中で最小の正の数はいくらになるか.
 """
 
-def soinsubunkai(n):
+def  soinsubunkai(n):
     soinsu=[]
     for i in range(2,n):
         while n%i==0:
@@ -22,7 +25,7 @@ def soinsubunkai(n):
     return soinsu
 
 yakusu0=[]
-n=15
+n=20
 
 for j in range(2,n+1):
     yakusu0.append(soinsubunkai(j))
