@@ -14,16 +14,16 @@ What is the 10 001st prime number?
 10 001 番目の素数を求めよ.
 """
 
-n=200000
-furui = list(range(2,n+1))
+n = 200000
+furui = list(range(2, n + 1))
 furui1 = list(furui)
 
 for i in furui:
     if i == 2:
         continue
     else:
-        for j in range(2,int(i**0.5)+2):
-            if i%j==0:
+        for j in range(2, int(i ** 0.5) + 2):
+            if i % j == 0:
                 furui1.remove(i)
                 break
 print(furui1)

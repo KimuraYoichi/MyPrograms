@@ -19,24 +19,24 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 n1 = 1
 n2 = 2
-fib=[1,2]
-fibEve=[2]
+fib = [1, 2]
+fibEve = [2]
 
 sumFibEve = 2
 
 limitNumber = 4000000
 
 while True:
-    n = n1+n2
-    fib.append( n  )
+    n = n1 + n2
+    fib.append(n)
     if n > limitNumber:
         break
-    elif n%2==0:
+    elif n % 2 == 0:
         sumFibEve += n
-        fibEve.append( n )
+        fibEve.append(n)
     n1 = n2
     n2 = n
-    
-print( sumFibEve )
-print( fib )
-print( fibEve )
+
+print(sumFibEve)
+print(fib)
+print(fibEve)

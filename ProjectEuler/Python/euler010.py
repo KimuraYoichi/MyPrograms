@@ -22,7 +22,7 @@ def primeJudge(n):
     :return: prime number -> True   not prime number -> False
     """
     found = False
-    for i in range( 2, int( n ** 0.5 ) + 1 ):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             found = True
             break
@@ -37,11 +37,11 @@ def primeJudge(n):
 n = 2000000
 sosuSum = 0
 
-seqToN = list( range( 2, n + 1 ) )
+seqToN = list(range(2, n + 1))
 
 for i in seqToN:
-    if i < n and primeJudge( i ):
+    if i < n and primeJudge(i):
         sosuSum += i
-        print( i )
+        print(i)
 
-print( sosuSum )
+print(sosuSum)

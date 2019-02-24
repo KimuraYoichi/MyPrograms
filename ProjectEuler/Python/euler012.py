@@ -22,70 +22,57 @@
 from collections import Counter
 
 
-def primeFactor(n) :
+def primeFactor(n):
     primeFactorList = []
-    for i in range( 2, n ) :
-        while n % i == 0 :
-            primeFactorList.append( i )
+    for i in range(2, n):
+        while n % i == 0:
+            primeFactorList.append(i)
             n = n / i
-        if n == 1 :
+        if n == 1:
             break
-    if n > 1 :
-        primeFactorList.append( n )
+    if n > 1:
+        primeFactorList.append(n)
     return primeFactorList
 
 
-def primeFactorization(primeList) :
-    c = Counter( primeList )
+def primeFactorization(primeList):
+    c = Counter(primeList)
     return c
 
 
-def divisorCounter(count) :
+def divisorCounter(count):
     divisorCon = 1
-    for k, v in count.items() :
+    for k, v in count.items():
         divisorCon *= v + 1
     return divisorCon
 
-def traiangleJudge(n) :
+
+def traiangleJudge(n):
     testNum = (1 + (1 + 8 * n) ** 0.5)
-    if testNum.is_integer() :
-        print( testNum )
+    if testNum.is_integer():
+        print(testNum)
         return testNum
-    else :
+    else:
         return False
 
 
 seqSum = 0
 pc = 0
 
-for i in range(1,2**500):
-        seqSum += i
-        # print( seqSum )
-        pf=primeFactor( seqSum )
-        pl=primeFactorization( pf )
-        pc=divisorCounter( pl )
-        if pc > 500:
-            print('----------answer')
-            # traiangleJudge( seqSum )
-            print( i )
-            print( seqSum )
-            print( pl )
-            print( divisorCounter( pl ) )
-            print('---------')
-            break
-        else:
-            # print( i )
-            continue
-
-
-# seqSum = (2 ** 500)
-# print( seqSum )
-# pf = primeFactor( seqSum )
-# pl = primeFactorization( pf )
-# pc = divisorCounter( pl )
-#
-# print( '----------answer' )
-# print( seqSum )
-# print( pl )
-# print( divisorCounter( pl ) )
-# print( '---------' )
+for i in range(1, 2 ** 500):
+    seqSum += i
+    # print( seqSum )
+    pf = primeFactor(seqSum)
+    pl = primeFactorization(pf)
+    pc = divisorCounter(pl)
+    if pc > 500:
+        print('----------answer')
+        # traiangleJudge( seqSum )
+        print(i)
+        print(seqSum)
+        print(pl)
+        print(divisorCounter(pl))
+        print('---------')
+        break
+    else:
+        continue

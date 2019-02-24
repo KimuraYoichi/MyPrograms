@@ -16,18 +16,11 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 kaibun = []
 
-for i in range(100,999):
-    for j in range(100,999):
-        product = i*j
-        str1=str(product)
+for i in range(100, 999):
+    for j in range(100, 999):
+        product = i * j
+        str1 = str(product)
         if str1 == str1[::-1]:
             kaibun.append(product)
-            
+
 print(max(kaibun))
-            
-
- 
-
-        
-        
-        

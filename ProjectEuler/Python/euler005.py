@@ -14,54 +14,43 @@ What is the smallest positive number that is evenly divisible by all of the numb
 では, 1 から 20 までの整数全てで割り切れる数字の中で最小の正の数はいくらになるか.
 """
 
-def  soinsubunkai(n):
-    soinsu=[]
-    for i in range(2,n):
-        while n%i==0:
+
+def soinsubunkai(n):
+    soinsu = []
+    for i in range(2, n):
+        while n % i == 0:
             soinsu.append(i)
-            n=int(n/i)
+            n = int(n / i)
     if n > 1:
         soinsu.append(n)
     return soinsu
 
-yakusu0=[]
-n=20
 
-for j in range(2,n+1):
+yakusu0 = []
+n = 20
+
+for j in range(2, n + 1):
     yakusu0.append(soinsubunkai(j))
-    
+
 print(yakusu0)
 print("---------")
 
-yakusuMaxList=[]
-j=0
+yakusuMaxList = []
+j = 0
 
-    
-for i in range(2,n+1):
+for i in range(2, n + 1):
     for l in yakusu0:
         if l.count(i) > 0:
             if l.count(i) >= j:
                 j = l.count(i)
-    yakusuMaxList.append([i,j])
+    yakusuMaxList.append([i, j])
     j = 0
-            
+
 print(yakusuMaxList)
 
-answer=1
+answer = 1
 
 for l in yakusuMaxList:
-    answer *= l[0]**l[1]
-    
+    answer *= l[0] ** l[1]
+
 print(answer)
-    
-
-        
-        
-        
-
-
-            
-        
-        
-    
-    

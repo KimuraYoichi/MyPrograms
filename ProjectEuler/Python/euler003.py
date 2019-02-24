@@ -16,19 +16,17 @@ What is the largest prime factor of the number 600851475143 ?
 600851475143 の素因数のうち最大のものを求めよ.
 """
 
-n=600851475143
-#n=13195
+n = 600851475143
 
-yakusu=[]
-x=2
-y=1
-
+yakusu = []
+x = 2
+y = 1
 
 while n > 1:
-    if n%x == 0:
+    if n % x == 0:
         yakusu.append(x)
-        n=n/x
-    x+=1
+        n = n / x
+    x += 1
 
 print("yasuku list")
 print(yakusu)
@@ -40,7 +38,6 @@ yakusu.remove(min(yakusu))
 
 for i in yakusu:
     y *= i
-    
+
 print("Max yakusu")
 print(y)
-

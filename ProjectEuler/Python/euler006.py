@@ -26,14 +26,13 @@ Find the difference between the sum of the squares of the first one hundred natu
 同様にして, 最初の100個の自然数について二乗の和と和の二乗の差を求めよ.
 """
 
-n=100
-answer=0
-seq1=list(range(1,n+1))
-
+n = 100
+answer = 0
+seq1 = list(range(1, n + 1))
 
 for i in range(n):
     for j in range(n):
         if seq1[i] != seq1[j]:
-            answer += seq1[i]*seq1[j]
+            answer += seq1[i] * seq1[j]
 
 print(answer)

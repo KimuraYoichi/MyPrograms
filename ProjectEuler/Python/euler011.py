@@ -38,23 +38,19 @@ Created on Sun Feb 10 16:10:11 2019
 import numpy as np
 
 filename = 'euler011.csv'
-raw_data = open( filename, 'r' )
-data = np.loadtxt( raw_data, delimiter=" " )
-
-# print(data)
+raw_data = open(filename, 'r')
+data = np.loadtxt(raw_data, delimiter=" ")
 
 n = 4
-sumList = []
 prodList = []
 
-for i in range( 20 - (n - 1) ):
-    for j in range( 20 - (n - 1) ):
+for i in range(20 - (n - 1)):
+    for j in range(20 - (n - 1)):
         squarMatrix = data[i:i + 4, j:j + 4]
-        prodList.append( max( np.prod( squarMatrix, axis=0 ) ) )
-        prodList.append( max( np.prod( squarMatrix, axis=1 ) ) )
-        prodList.append( np.prod(np.diag( squarMatrix ) ) )
-        prodList.append(squarMatrix[3,0]*squarMatrix[1,2]*squarMatrix[2,1]*squarMatrix[0,3]) * この部分は最高必要
-# print( max( sumList ) )
+        prodList.append(max(np.prod(squarMatrix, axis=0)))
+        prodList.append(max(np.prod(squarMatrix, axis=1)))
+        prodList.append(np.prod(np.diag(squarMatrix)))
+        prodList.append(squarMatrix[3, 0] * squarMatrix[1, 2] * squarMatrix[2, 1] * squarMatrix[0, 3])  # 再考必要
+
 print(prodList)
-print( max( prodList ))
-.diag(data)))
+print(max(prodList))
