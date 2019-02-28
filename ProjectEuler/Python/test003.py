@@ -10,7 +10,20 @@ http://kashiyuki.hatenablog.com/entry/2017/03/05/230423
 #
 # print(n)
 
+# import myeuler
+#
+# pd = myeuler.PrimeFactorization(100)
+#
+# print(pd.primedivisor())
+# # print(pf.primedivisor())
+
 import myeuler as mye
 
-print(mye.PrimeFactorization(1000).primedivisor())
-# print(pf.primedivisor())
+spam = mye.Spam(5,10)
+spam.output()
+
+pf = mye.PrimeFactorization(100)
+print(pf.primedivisor())
+
+print(mye.Alph2num('kimura').alph2num())
+
