@@ -10,7 +10,7 @@
 # #     [4]        # G
 # # ]
 #
-a_list=[
+a_list = [
     [1, 2],
     [3, 4],
     [4, 5],
@@ -21,7 +21,7 @@ a_list=[
     [],
     [],
     [],
-   ]
+]
 
 
 # a_list = []
@@ -49,6 +49,4 @@ def search(goal, path):
 # for n in range(105,120):
 #     search(n, [0])
 
-search(9,[0])
-
-
+search(9, [0])
